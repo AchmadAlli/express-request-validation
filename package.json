@@ -2,14 +2,20 @@
   "name": "express-validator-example",
   "version": "1.0.0",
   "description": "this is only sample validator",
-  "author": {"name": "achmad ali baidlowi", "email": "achmadali.baidlowi@gmail.com"},
-  "repository": {"url": "https://github.com/AchmadAlli"},
+  "author": {
+    "name": "achmad ali baidlowi",
+    "email": "achmadali.baidlowi@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/AchmadAlli"
+  },
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1"
   }
 }
