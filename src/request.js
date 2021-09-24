@@ -1,13 +1,9 @@
-const { body, validationResult,  } = require('express-validator')
+const { body, validationResult } = require('express-validator')
 
 const validateRegistration = [
   body('name', "name is required").exists(),
   body('username', "username is required").exists(),
-  body('email')
-    .exists()
-    .withMessage("email is required")
-    .isEmail()
-    .withMessage("invalid email"),
+  body('email', "invalid email").isEmail(),
   body('phone').optional().isInt().isLength({
     min: 11,
     max: 13
@@ -17,10 +13,6 @@ const validateRegistration = [
   body('repassword', 'Password confirmation is incorrect').exists().custom(checkPassword),
   validate
 ];
-
-function validateSalary(){
-
-}
 
 function checkPassword(value, {req}){
   return value === req.body.password
